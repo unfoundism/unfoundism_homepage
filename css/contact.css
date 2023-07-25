@@ -1,0 +1,359 @@
+.section1 {
+    height: 100vh;
+}
+
+.section2 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    align-items: start;
+    display: block;
+}
+
+.section2 h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 2s;
+}
+.section2 .alert {
+    color: red;
+    opacity: 0;
+    padding: 0;
+    transition: all 0.5s;
+}
+.section2 .alertshow {
+    color: red;
+    opacity: 1;
+}
+.section2 h1.active {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-0%, -0%);
+}
+
+.section2>.contents span {
+    font-size: 16px;
+    font-weight: 200;
+    color: var(--darkgray-color);
+    border-radius: 0;
+    padding-left: 16px;
+}
+
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]+label {
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    border: 1px solid var(--lightgray-color);
+    text-align: center;
+    line-height: 50px;
+    cursor:pointer;
+    color: var(--darkblue-color);
+    margin: 10px;
+}
+
+input[type="radio"]:checked+label {
+    background-color: var(--darkblue-color);
+    color: var(--fore-color);
+}
+
+.d-flex div {
+    width: 50%;
+}
+.project-title input {
+    width: 70%;
+    display: block;
+    margin-bottom: 50px;
+    border: none;
+    font-size: 16px;
+    border-bottom: 1px solid var(--darkblue-color);
+}
+
+.contact-info {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+h4 {
+    width: 100%;
+}
+.contact-info .input-group {
+    width: 50%;
+    position: relative;
+
+}
+.contact-info .input-group label {
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s;
+}
+.contact-info .input-group label.active {
+    top: -20px;
+    opacity: 1;
+    visibility: visible;
+}
+.contact-info .wrapper .sub-checkboxs input {
+    width: 10px;
+    height: 10px;
+    margin-bottom: 0;
+    display: inline-block;
+}
+.contact-info .wrapper .sub-checkboxs li {
+    height: 30px;
+}
+.contact-info .wrapper .sub-checkboxs label {
+    position: relative;
+    top: 0px;
+    opacity: 1;
+    visibility: visible;
+}
+.contact-info .input-group input {
+    width: 95%;
+    display: block;
+    margin-bottom: 50px;
+    border: none;
+    font-size: 16px;
+    border-bottom: 1px solid var(--darkblue-color);
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type="button"] {
+    width: 200px;
+    height: 50px;
+    border: 0;
+    border-radius: 0;
+    background-color: var(--darkblue-color);
+    color: var(--fore-color);
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+}
+input[type="button"]:hover {
+    background-color: var(--fore-color);
+    color: var(--darkblue-color);
+}
+
+select {
+    width: 100%;
+}
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.select-group {
+    width: 50%;
+}
+.contents > div {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.ui-selectmenu-button.ui-button {
+    width: 95%;
+}
+.ui-selectmenu-button.ui-button {
+    background-color: white;
+}
+.ui-selectmenu-text {
+    height: 35px;
+    line-height: 35px;
+}
+
+.ui-button .ui-icon {
+    width: 26px !important;
+    height: 10px;
+    background-image: url(/img/arrow_down.png) !important;
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: contain;
+    line-height: 10px;
+    top: 11px;
+    z-index: 999;
+    scale: 0.6;
+}
+
+
+/* step */
+.contents {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.step {
+    width: 100%;
+}
+.step1, .step2, .step3, .step4, .step5 {
+    display: none;
+    opacity: 0;
+    transition: all 3s;
+}
+.step5 .wrapper .input-group .checkbox__label {
+    opacity: 1;
+    visibility: visible;
+
+} 
+.step-button {
+    justify-content: space-between;
+    display: none;
+    opacity: 0;
+    transition: all 3s;
+    width: 80%;
+    position: absolute;
+    bottom: 20%;
+}
+.step-button button {
+    background-color: var(--darkblue-color);
+    color: var(--fore-color);
+    border: 0;
+    outline: 0;
+    width: 100px;
+    height: 40px;
+    transition: all 0.5s;
+    font-weight: 300;
+}
+.step-button button:hover {
+    background-color: var(--lightgray-color);
+    color: var(--darkblue-color);
+    font-weight: bold;
+}
+.step-button .step-now {
+    height: 40px;
+    line-height: 40px;
+}
+
+/* pop-up */
+.pop-up {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    transition: all 0.5s;
+}
+
+.pop-up .wrapper {
+    width: 350px;
+    height: 120px;
+    background-color: var(--fore-color);
+    opacity: 1;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: center;
+}
+.agree_popuplayer {
+    display: none;
+}
+.agree_popup_mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    z-index: 100;
+}
+.agree_popuplayer .content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 720px;
+    height: 800px;
+    padding: 30px;
+    margin-left: -350px;
+    margin-top: -250px;
+    background: #fff;
+    z-index: 101;
+}
+.agree_popup_close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    cursor: pointer;
+    z-index: 102;
+}
+.agree_popup_close i {
+    font-size: 25px;
+    color: var(--darkblue-color);
+}
+.pup-up a {
+    color: var(--darkblue-color);
+}
+
+@media screen and (max-width: 768px) {
+    input[type="radio"]+label {
+        font-size: 13px;
+        width: 45%;
+        margin: 5px;
+        padding: 0 5px;
+    }
+    h1 {
+        font-size: 18px;
+    }
+    h4, h6 {
+        font-size: 14px;
+    }
+    h6.alert {
+        margin-bottom: 0;
+    }
+    .step-button {
+        bottom: 7%;
+    }
+    .step-button button {
+        width: 80px;
+    }
+    .project-title input {
+        width: 100%;
+        font-size: 12px;
+    }
+    .select-group {
+        width: 100%;
+        margin-bottom: 20%;
+    }
+    .project-title input {
+        font-size: 16px;
+    }
+    .contact-info .input-group {
+        width: 100%;
+    }
+    .contact-info .input-group input {
+        margin-bottom: 20px;
+        font-size: 16px;
+        font-weight: 100;
+    }
+    .section2>.contents span {
+        font-size: 12px;
+    }
+    .button__sub-checkbox {
+        font-size: 12px;
+    }
+    .pop-up .wrapper {
+        width: 100%;
+        flex-direction: column;
+    }
+    .pop-up .wrapper button {
+        width: 50px;
+    }
+    .agree_popuplayer .content {
+        width: 80%;
+        height: 80%;
+        transform: translate(87%, 9%);
+        overflow: scroll;
+    }
+}
